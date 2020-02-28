@@ -7,6 +7,8 @@ public class Hover : MonoBehaviour
     public float degreesPerSecond = 15.0f;
     public float amplitude = 0.5f;
     public float frequency = 1f;
+
+    public bool doesSpin = true;
        
     Vector3 posOffset = new Vector3();
     Vector3 tempPos = new Vector3();
@@ -23,7 +25,8 @@ public class Hover : MonoBehaviour
     {
         if(canHover)
         {
-            transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
+            if(doesSpin)
+                transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
 
             // Float up/down with a Sin()
             tempPos = posOffset;

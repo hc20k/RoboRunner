@@ -28,7 +28,6 @@ public class Enemy : MonoBehaviour
     {
         manager = FindObjectOfType<Manager>();
         GetComponent<Rigidbody>().isKinematic = true; // DONT MOVE FROM BALLISTICS
-
         Idle();
     }
 
