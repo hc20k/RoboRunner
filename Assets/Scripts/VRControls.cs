@@ -18,6 +18,7 @@ public class VRControls : MonoBehaviour
     public SteamVR_Action_Boolean burgerPressed;
 
     public bool isGripping;
+    public bool bulletsUseGravity = true;
     public bool canMove = true;
 
     public SteamVR_Action_Vector2 touchPadSlide;
@@ -34,12 +35,17 @@ public class VRControls : MonoBehaviour
         triggerAction.AddOnChangeListener(WillShoot, SteamVR_Input_Sources.RightHand);
     }
 
-    private void WillShoot(SteamVR_Action_Single fromAction, SteamVR_Input_Sources fromSource, float newAxis, float newDelta)
+    public void WillShoot(SteamVR_Action_Single fromAction, SteamVR_Input_Sources fromSource, float newAxis, float newDelta)
     {
         if(fromSource == SteamVR_Input_Sources.RightHand && newAxis > 0.9)
         {
             StartCoroutine(Shoot());
         }
+    }
+
+    private void OnDestroy()
+    {
+        triggerAction.RemoveOnChangeListener(WillShoot, SteamVR_Input_Sources.RightHand);
     }
 
     IEnumerator Shoot()
@@ -48,10 +54,14 @@ public class VRControls : MonoBehaviour
         weapon.GetComponent<AudioSource>().pitch = UnityEngine.Random.Range(0.8f,1.1f);
         weapon.GetComponent<AudioSource>().Play();
 
+        weapon.GetComponentInChildren<Animation>().Stop();
+        weapon.GetComponentInChildren<Animation>().Play();
+
         GameObject bullet = Instantiate(manager.bullet, weapon.muzzle.transform.position, weapon.muzzle.transform.rotation);
         bullet.tag = "PlayerBullet";
         bullet.transform.Rotate(new Vector3(0, 90, 90));
         bullet.GetComponent<Rigidbody>().velocity = weapon.muzzle.transform.forward * 200;
+        bullet.GetComponent<Rigidbody>().useGravity = bulletsUseGravity;
 
         bullet.GetComponent<Renderer>().enabled = false;
         yield return new WaitForSeconds(0.1f); // looks wierd w/o it

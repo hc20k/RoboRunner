@@ -89,11 +89,9 @@ public class Player : MonoBehaviour
 
             StartCoroutine(TookDamage());
             Destroy(other.gameObject);
-        } else if(other.gameObject.tag == "PlayerBullet")
-        {
-            // Suicide. tf??
-            Die();
-        }
+        } 
+        //else if(other.gameObject.tag == "PlayerBullet")
+            //Die();
     }
 
     // Update is called once per frame

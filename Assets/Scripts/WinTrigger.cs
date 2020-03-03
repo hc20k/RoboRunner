@@ -10,6 +10,7 @@ public class WinTrigger : MonoBehaviour
     public GameObject timeLabel;
     public GameObject attemptsLabel;
     public GameObject enemiesKilledLabel;
+    public GameObject pointsLabel;
 
     void Start()
     {
@@ -33,6 +34,20 @@ public class WinTrigger : MonoBehaviour
             timeLabel.GetComponent<TextMesh>().text = "Time: "+ string.Format("{0:D2}:{1:D2}",duration.Minutes, duration.Seconds);
             attemptsLabel.GetComponent<TextMesh>().text = "Attempts: "+manager.attempts;
             enemiesKilledLabel.GetComponent<TextMesh>().text = "Enemies Killed: " + manager.player.GetComponent<Player>().enemiesKilled;
+
+            int points = Mathf.Abs((int)((manager.player.GetComponent<Player>().enemiesKilled * 15) + (-duration.TotalSeconds / 15) + (-manager.attempts / 3)));
+
+            if (manager.attempts == 1)
+            {
+                points += 100;
+            }
+
+            pointsLabel.GetComponent<TextMesh>().text = points + " points!";
+
+            if (manager.attempts == 1)
+            {
+                pointsLabel.GetComponent<TextMesh>().text += "\nPerfect!";
+            }
         }
     }
 

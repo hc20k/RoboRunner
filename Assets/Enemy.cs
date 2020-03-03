@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public float shotRate = 1;
     public bool canShoot = true;
     public float bulletLife = 2.0f;
+    public bool deathBarrierApplies = true;
 
     public Transform enemyModelBase;
 
@@ -34,6 +35,7 @@ public class Enemy : MonoBehaviour
     void Idle()
     {
         GetComponent<AudioSource>().pitch = 1;
+        GetComponent<AudioSource>().volume = 0.5f;
         GetComponent<AudioSource>().clip = idleSound;
         GetComponent<AudioSource>().loop = true;
         GetComponent<AudioSource>().Play();
@@ -58,6 +60,9 @@ public class Enemy : MonoBehaviour
         GetComponent<Hover>().canHover = false;
         spotlight.GetComponent<Light>().intensity = 0;
         manager.player.GetComponent<Player>().OnEnemyDeath(gameObject);
+
+        // Zoom
+        GetComponent<Rigidbody>().AddForce(transform.forward, ForceMode.Impulse);
     }
 
     public void OnPlayerRespawn()
@@ -142,7 +147,7 @@ public class Enemy : MonoBehaviour
         }
 
         // Death barrier applies for you too
-        if(transform.position.y < manager.deathBarrier)
+        if(transform.position.y < manager.deathBarrier && deathBarrierApplies)
         {
             if(health > 0)
             {

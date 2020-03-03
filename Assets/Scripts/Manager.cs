@@ -60,13 +60,16 @@ public class Manager : MonoBehaviour
             }
         }
 
+        if(levelFinished == false)
+        {
+            player.transform.position = spawnpoint + new Vector3(0, 3, 0);
+            player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0); //reset veloc
+            attempts++;
+        } else
+        {
+            player.transform.position = GameObject.FindGameObjectWithTag("Win").transform.position;
+        }
 
-        // TODO: Respawn sound
-        // TODO: Camera fx
-
-        player.transform.position = spawnpoint + new Vector3(0,3,0);
-        player.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0); //reset veloc
-        attempts++;
     }
 
     public void LevelFinished(LevelOutcome outcome)

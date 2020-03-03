@@ -2,13 +2,13 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.vrrunner.exe",
+      "app_key": "application.generated.unity.roborunner.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\h!\\Documents\\VRRunner\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\h!\\Documents\\VRRunner\\RoboRunner\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "VRRunner [Testing]"
+          "name": "RoboRunner [Testing]"
         }
       }
     }

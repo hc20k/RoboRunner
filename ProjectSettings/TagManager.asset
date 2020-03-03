@@ -10,6 +10,13 @@ TagManager:
   - PlayerBullet
   - Fire
   - Wall
+  - GasTank
+  - Metal
+  - projectile
+  - Target
+  - FxTemporaire
+  - ExplosiveBarrel
+  - Win
   layers:
   - Default
   - TransparentFX
