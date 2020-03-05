@@ -6,6 +6,7 @@ using Valve.VR;
 public class ContinueToMainMenu : MonoBehaviour
 {
     Manager manager;
+    public bool levelFinishedCheck = true;
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +22,13 @@ public class ContinueToMainMenu : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "PlayerBullet" && manager.levelFinished == true)
+        if (other.gameObject.tag == "PlayerBullet")
         {
-            manager.player.GetComponent<VRControls>().triggerAction.RemoveOnChangeListener(manager.player.GetComponent<VRControls>().WillShoot, SteamVR_Input_Sources.RightHand); //MissingReferenceException
-            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu", UnityEngine.SceneManagement.LoadSceneMode.Single);
+            if ((levelFinishedCheck == true && manager.levelFinished == true) || (levelFinishedCheck == false && manager.levelFinished == false))
+            {
+                manager.player.GetComponent<VRControls>().triggerAction.RemoveOnChangeListener(manager.player.GetComponent<VRControls>().WillShoot, SteamVR_Input_Sources.RightHand); //MissingReferenceException
+                UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu", UnityEngine.SceneManagement.LoadSceneMode.Single);
+            }
         }
     }
 }

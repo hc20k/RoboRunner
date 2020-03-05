@@ -78,9 +78,10 @@ public class VRControls : MonoBehaviour
     {
         GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         Vector2 touchpadValue = touchPadSlide.GetAxis(SteamVR_Input_Sources.Any);
-        bool isPressingBurger = burgerPressed.GetState(SteamVR_Input_Sources.Any);
+        bool isPressingBurgerL = burgerPressed.GetState(SteamVR_Input_Sources.LeftHand);
+        bool isPressingBurgerR = burgerPressed.GetState(SteamVR_Input_Sources.RightHand);
 
-        if(!isGripping && canMove == true)
+        if (!isGripping && canMove == true)
         {
             transform.position += (mainCamera.transform.right * touchpadValue.x + mainCamera.transform.forward * touchpadValue.y) * Time.deltaTime * movementRate;
             bool isOnGround = Physics.Raycast(transform.position, -Vector3.up, GetComponent<Collider>().bounds.extents.y + 0.1f);
@@ -91,6 +92,11 @@ public class VRControls : MonoBehaviour
             }
         }
 
-        Time.timeScale = (isPressingBurger == true) ? 0.2f : 1f; // Matrix bitch
+        Time.timeScale = (isPressingBurgerR == true) ? 0.2f : 1f; // Matrix bitch
+
+        if(isPressingBurgerL)
+        {
+            weapon.GetComponent<Weapon>().revolveCamo();
+        }
     }
 }
