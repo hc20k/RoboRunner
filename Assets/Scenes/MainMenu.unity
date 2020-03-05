@@ -381,8 +381,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262545699}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 45.40005, y: -34.654682, z: 0.0033062631}
-  m_LocalScale: {x: 99.99995, y: 33.333336, z: 99.999954}
+  m_LocalPosition: {x: 45.40005, y: -34.654682, z: 47.6}
+  m_LocalScale: {x: 194.9999, y: 33.333336, z: 99.999954}
   m_Children:
   - {fileID: 597959640}
   m_Father: {fileID: 319350921}
@@ -1305,40 +1305,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &893959111
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &921404014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,7 +1422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008295285}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.31, z: 0.393}
+  m_LocalPosition: {x: -0, y: 0.26, z: 0.012}
   m_LocalScale: {x: 0.01, y: 0.03, z: 0.01}
   m_Children: []
   m_Father: {fileID: 2118136670}
@@ -1470,16 +1436,14 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008295285}
-  m_Text: 'LEVEL 2
-
-'
+  m_Text: STAIRWAY
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
-  m_Anchor: 0
-  m_Alignment: 0
+  m_Anchor: 1
+  m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 240
+  m_FontSize: 197
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 6e86be5e27d71447d88239cb03d43d53, type: 3}
@@ -1535,12 +1499,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1630687113}
+      objectReference: {fileID: 1772890524}
     - target: {fileID: 8042785308642264617, guid: c19812db23add424aa5bd321f0d56bc3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 893959111}
+      objectReference: {fileID: 1513248445}
     - target: {fileID: 8042785308644453519, guid: c19812db23add424aa5bd321f0d56bc3,
         type: 3}
       propertyPath: m_Name
@@ -1732,8 +1696,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211322233}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 45.40005, y: -172.29874, z: 0.0033062631}
-  m_LocalScale: {x: 99.99995, y: 33.333336, z: 99.999954}
+  m_LocalPosition: {x: 45.40005, y: -172.29874, z: 47.6}
+  m_LocalScale: {x: 194.9999, y: 33.333336, z: 99.999954}
   m_Children:
   - {fileID: 1309081063}
   m_Father: {fileID: 319350921}
@@ -1916,7 +1880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309081062}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.31, z: 0.393}
+  m_LocalPosition: {x: -0, y: 0.31, z: 0.259}
   m_LocalScale: {x: 0.01, y: 0.03, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1211322234}
@@ -1930,9 +1894,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309081062}
-  m_Text: 'LEVEL 3
-
-'
+  m_Text: MOON
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -2076,6 +2038,40 @@ Transform:
   m_Father: {fileID: 1922250970}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1513248445
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1568521591
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,7 +2347,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!43 &1630687113
+--- !u!43 &1772890524
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2668,8 +2664,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118136669}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 45.40005, y: -124.269516, z: 0.0033062631}
-  m_LocalScale: {x: 99.99995, y: 33.333336, z: 99.999954}
+  m_LocalPosition: {x: 45.40005, y: -124.269516, z: 47.6}
+  m_LocalScale: {x: 194.9999, y: 33.333336, z: 99.999954}
   m_Children:
   - {fileID: 1008295286}
   m_Father: {fileID: 319350921}
@@ -2821,8 +2817,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126099706}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 45.40005, y: -78.78524, z: 0.0033062631}
-  m_LocalScale: {x: 99.99995, y: 33.333336, z: 99.999954}
+  m_LocalPosition: {x: 45.40005, y: -78.78524, z: 47.6}
+  m_LocalScale: {x: 194.9999, y: 33.333336, z: 99.999954}
   m_Children:
   - {fileID: 1588568415}
   m_Father: {fileID: 319350921}

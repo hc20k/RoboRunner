@@ -16,7 +16,7 @@ public class ControllerGrab : MonoBehaviour {
     private GameObject objectInHand;
     private bool triggerHeld = false;
 
-
+    public GameObject vomitPrefab;
 
     void Start() {
         trigger.AddOnStateDownListener(TriggerDown, handType);
@@ -38,6 +38,12 @@ public class ControllerGrab : MonoBehaviour {
         if (collidingObject) {
             Grab();
         }
+
+        GameObject vomitProjectile = Instantiate(vomitPrefab, GameObject.FindGameObjectWithTag("Player").transform);
+        vomitProjectile.AddComponent<Rigidbody>();
+        vomitProjectile.GetComponent<Rigidbody>().AddForce(GameObject.FindGameObjectWithTag("Player").transform.forward, ForceMode.Impulse);
+
+
     }
 
     // Update is called once per frame

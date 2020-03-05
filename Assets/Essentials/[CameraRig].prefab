@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7334480424963155377
 Transform:
   m_ObjectHideFlags: 0
@@ -216,6 +216,18 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &5031544171298055623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8041299083081435148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af33b5e05b8e48ab85fa2d540f774e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8042785308644242905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,7 +1141,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 428070d469a614e2f9c5988495ae5b8f, type: 2}
+      objectReference: {fileID: 2100000, guid: 7bc2d29c773e34097b4b4a28d80a0ac0, type: 2}
     - target: {fileID: 23598256546927380, guid: ea530e89dc913d14480baec0a57c7801,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1137,9 +1149,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ac10a103ea523e54589c534bd04e0fb8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea530e89dc913d14480baec0a57c7801, type: 3}
---- !u!4 &8038112095475835678 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4691602961401422, guid: ea530e89dc913d14480baec0a57c7801,
+--- !u!1 &8041299083081435148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1645184267119964, guid: ea530e89dc913d14480baec0a57c7801,
     type: 3}
   m_PrefabInstance: {fileID: 8042785308341347664}
   m_PrefabAsset: {fileID: 0}
@@ -1155,9 +1167,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8042785308341347664}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8041299083081435148 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1645184267119964, guid: ea530e89dc913d14480baec0a57c7801,
+--- !u!4 &8038112095475835678 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4691602961401422, guid: ea530e89dc913d14480baec0a57c7801,
     type: 3}
   m_PrefabInstance: {fileID: 8042785308341347664}
   m_PrefabAsset: {fileID: 0}
